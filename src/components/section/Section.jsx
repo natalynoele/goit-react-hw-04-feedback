@@ -1,4 +1,5 @@
-import Wrapper from "./SectionStyle"
+import PropTypes from 'prop-types';
+import Wrapper from './SectionStyle';
 
 const Section = ({ title, children }) => {
   return (
@@ -7,6 +8,9 @@ const Section = ({ title, children }) => {
       {children}
     </Wrapper>
   );
-}
+};
 
-export default Section
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+}
+export default Section;

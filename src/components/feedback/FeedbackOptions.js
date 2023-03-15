@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Button from './ButtonStyle';
 import { capitalizeFirstLetter } from '../helper';
 
@@ -10,6 +11,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           type="button"
           data-key={option}
           onClick={onLeaveFeedback}
+          o
         >
           {capitalizeFirstLetter(option)}
         </Button>
@@ -18,4 +20,8 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   );
 };
 
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.shape),
+  onLeaveFeedback: PropTypes.func,
+};
 export default FeedbackOptions;

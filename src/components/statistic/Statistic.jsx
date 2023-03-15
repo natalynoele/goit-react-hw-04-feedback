@@ -1,12 +1,15 @@
+import PropTypes from 'prop-types';
 import StatisticWrap from './StatisticStyle';
 
 const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <StatisticWrap>
-      <p>Good:
+      <p>
+        Good:
         <span>{good}</span>
       </p>
-      <p>Neutral:
+      <p>
+        Neutral:
         <span>{neutral}</span>
       </p>
       <p>
@@ -22,4 +25,11 @@ const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
   );
 };
 
+Statistic.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
+};
 export default Statistic;
