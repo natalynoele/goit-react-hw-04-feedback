@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Button from './ButtonStyle';
-import { capitalizeFirstLetter } from '../helper';
+import capitalizeFirstLetter from 'functions/capitalizeFirstLetter';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
