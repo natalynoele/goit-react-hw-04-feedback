@@ -10,8 +10,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           key={option}
           type="button"
           data-key={option}
-          onClick={onLeaveFeedback}
-          o
+          onClick={onLeaveFeedback}          
         >
           {capitalizeFirstLetter(option)}
         </Button>

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import StatisticWrap from './StatisticStyle';
 
-const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
+const Statistic = ({ good, neutral, bad,  }) => {
   return (
     <StatisticWrap>
       <p>
@@ -15,12 +15,12 @@ const Statistic = ({ good, neutral, bad, total, positivePercentage }) => {
       <p>
         Bad: <span>{bad}</span>
       </p>
-      <p>
+      {/* <p>
         Total: <span>{total}</span>
       </p>
       <p>
         Positive feedback: <span>{positivePercentage}</span>
-      </p>
+      </p> */}
     </StatisticWrap>
   );
 };
