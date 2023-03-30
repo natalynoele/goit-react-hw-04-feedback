@@ -5,12 +5,12 @@ import capitalizeFirstLetter from 'functions/capitalizeFirstLetter';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
-      {options.map(option => (
+      {Object.keys(options).map(option => (
         <Button
           key={option}
           type="button"
           data-key={option}
-          onClick={onLeaveFeedback}          
+          onClick={onLeaveFeedback}
         >
           {capitalizeFirstLetter(option)}
         </Button>
@@ -20,7 +20,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.shape),
+  options: PropTypes.object,
   onLeaveFeedback: PropTypes.func,
 };
 export default FeedbackOptions;
